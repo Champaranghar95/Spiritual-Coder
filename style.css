@@ -1,0 +1,373 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  :root {
+    --primary: rgb(37, 90, 87);
+    --secondery: rgb(1, 0, 10);
+    --accent: rgb(50, 253, 243);
+    --text: #fff;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background: var(--primary);
+    font-family: Poppins, sans-serif;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--text);
+  }
+  
+  img {
+    width: 100%;
+  }
+
+  /* utility classes */
+.container {
+    padding: 4rem 2rem;
+    color: var(--text);
+  }
+  
+  .highlighted {
+    color: var(--accent);
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .btn {
+    background-color: var(--accent);
+    color: var(--text);
+    padding: 0.5rem 3rem;
+    border-radius: 5rem;
+    display: inline-block;
+    margin-top: 2rem;
+    border: 2px solid var(--accent);
+  }
+  
+  .btn:hover {
+    background-color: transparent;
+    color: var(--accent);
+  }
+
+
+  /* Header style */
+.nav {
+    background-color: var(--secondery);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    width: 100%;
+  }
+  
+  .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  
+  .nav-links {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50px;
+    background-color: var(--secondery);
+    width: 100%;
+    left: -200%;
+    padding: 1rem;
+    transition: left 0.5s ease;
+  }
+  
+  .nav-active {
+    left: 0;
+  }
+  
+  .nav-item {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    position: relative;
+  }
+  
+  .nav-item::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(56, 56, 56);
+    margin-top: 0.5rem;
+  }
+  
+  .nav-item:hover {
+    opacity: 1;
+  }
+  
+  .nav-item-active::after {
+    background-color: var(--accent);
+    opacity: 1;
+  }
+  
+  .toggler .line {
+    width: 30px;
+    height: 2px;
+    display: block;
+    background-color: var(--text);
+    margin: 5px;
+  }
+
+
+  /* Hero styles */
+.hero {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    color: var(--text);
+  }
+  
+  .hero-img {
+    padding-top: 2rem;
+  }
+  
+  .hero-info {
+    text-align: center;
+    padding-top: 3rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-description {
+    opacity: 0.7;
+  }
+
+  /* About style */
+.about {
+    color: var(--text);
+  }
+  
+  .about-info {
+    padding-top: 2rem;
+  }
+  
+  .description {
+    opacity: 0.7;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  .secondery-title {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+  }
+  
+  .secondery-title::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 0.5rem;
+    background-color: var(--accent);
+  }
+
+
+  /* Services styles */
+.services-item {
+    background: var(--secondery);
+    border-radius: 10px;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .services-item i {
+    font-size: 4rem;
+    color: var(--accent);
+    margin-bottom: 2rem;
+  }
+
+
+  /* Projects styles */
+.projects-header {
+    padding-bottom: 2rem;
+  }
+  
+  .projects-tab-btn {
+    background-color: transparent;
+    border: 2px solid var(--accent);
+    color: var(--text);
+    padding: 0.3rem 1.5rem;
+    border-radius: 5rem; 
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .projects-tab-btn-active {
+    background-color: var(--accent);
+  }
+  
+  .projects-item {
+    margin-bottom: 1rem;
+  }
+  
+  .projects-item img {
+    border-radius: 10px;
+  }
+
+
+  /* contact styles */
+.contact-info-item {
+    display: flex;
+  }
+  
+  .contact-info-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5rem;
+    margin-bottom: 1rem;
+    
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input,
+  textarea {
+    background: var(--secondery);
+    border: none;
+    border-radius: 10px;
+    margin-top: 1rem;
+    padding: 0.8rem 1rem;
+    color: #f1f0f0;
+  }
+  
+  .footer {
+    color: var(--text);
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+
+  /* Desktop Design */
+@media screen and (min-width: 700px) {
+    .container {
+      padding: 4rem 6rem;
+    }
+  
+    .description {
+      font-size: 1rem;
+    }
+  
+    /* grid */
+    .grid {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+  
+    .grid-item {
+      width: 30%;
+    }
+  
+    /* nav */
+    .nav {
+      padding-left: 6rem;
+      padding-right: 6rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .toggler {
+      display: none;
+    }
+  
+    .nav-links {
+      position: static;
+      flex-direction: row;
+      padding: 0;
+      width: auto;
+    }
+  
+    .nav-item {
+      margin: 0 0.5rem;
+    }
+  
+    .nav-item::after {
+      position: absolute;
+      top: 30px;
+      margin: 0;
+      background: none;
+    }
+  
+    .nav-item-active {
+      opacity: 1;
+    }
+  
+    .nav-item-active::after {
+      background: var(--accent);
+    }
+  
+    /* hero */
+    .hero {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .hero-info {
+      text-align: left;
+    }
+  
+    .title {
+      font-size: 5rem;
+    }
+  
+    /* About */
+    .about {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .about-img {
+      width: 40%;
+    }
+  
+    .about-info {
+      width: 55%;
+    }
+  
+    /* contact */
+    .contact {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .contact-form {
+      width: 55%;
+    }
+  
+    .submit-btn {
+      font-size: 1.5rem;
+    }
+  }
+
+
+ 
