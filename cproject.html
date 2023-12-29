@@ -45,6 +45,23 @@
       max-height: 100%;
       display: block;
   }
+
+  pre {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            white-space: pre-wrap;
+            overflow-x: auto; /* Adds horizontal scrollbar if needed */
+            position: relative;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 10;
+        }
   
   /* Responsive adjustments */
   @media (max-width: 600px) {
@@ -209,11 +226,14 @@
         style="border-radius: 15px; border: 2px solid black"
       />
 
-      <div class="container bg-dark text-light p-4 custom-container">
+      <div class="container p-4 custom-container">
         <h2><i>1. Rock Paper Scissors</i></h2>
-
+        <div class="row">
+          <div class="col">
+              <div class="position-relative">
+                  <button class="btn btn-secondary copy-btn" onclick="copyToClipboard()">Copy</button>
         <pre>
-            <code style="color: white;">
+            <code>
                 // C program for the above approach
 #include math.h
 #include stdio.h
@@ -317,6 +337,10 @@ int main()
         </pre>
       </div>
     </div>
+        </div>
+      </div>
+    </div>
+    
 
     <!-- Your content goes here -->
     <div class="container mt-5">
@@ -327,11 +351,14 @@ int main()
         style="border-radius: 15px; border: 2px solid black"
       />
 
-      <div class="container bg-dark text-light p-4 custom-container">
+      <div class="container p-4 custom-container">
         <h2><i>2. Hangman Game</i></h2>
-
+        <div class="row">
+          <div class="col">
+              <div class="position-relative">
+                  <button class="btn btn-secondary copy-btn" onclick="copyToClipboard()">Copy</button>
         <pre>
-                <code style="color: white;">
+                <code>
 #include stdio.h
   #include string.h
   
@@ -708,6 +735,10 @@ int main()
             </pre>
       </div>
     </div>
+        </div>
+      </div>
+    </div>
+    
 
     <!-- Your content goes here -->
     <div class="container mt-5">
@@ -718,10 +749,14 @@ int main()
         style="border-radius: 15px; border: 2px solid black"
       />
 
-      <div class="container bg-dark text-light p-4 custom-container">
+      <div class="container p-4 custom-container">
         <h2><i>3. Simple Calculator</i></h2>
+        <div class="row">
+          <div class="col">
+              <div class="position-relative">
+                  <button class="btn btn-secondary copy-btn" onclick="copyToClipboard()">Copy</button>
         <pre>
-                <code style="color: white;">
+                <code>
 // C Program to make a Simple Calculator
 // Using switch case
 #include stdio.h>
@@ -781,6 +816,9 @@ int main()
             </pre>
       </div>
     </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Your content goes here -->
     <div class="container mt-5 mb-5">
@@ -791,10 +829,14 @@ int main()
         style="border-radius: 15px; border: 2px solid black"
       />
 
-      <div class="container bg-dark text-light p-4 custom-container">
+      <div class="container p-4 custom-container">
         <h2>4. Tic-tac-toe Game</h2>
+        <div class="row">
+          <div class="col">
+              <div class="position-relative">
+                  <button class="btn btn-secondary copy-btn" onclick="copyToClipboard()">Copy</button>
         <pre>
-                <code style="color: white;">
+                <code>
                     /*
  *  Tic_Tac_Toe - A basic tic tac toe game using minimax algorithm>
  *Copyright (C) 2018  Parth Parikh
@@ -1152,6 +1194,9 @@ int main (void) {
             </pre>
       </div>
     </div>
+        </div>
+      </div>
+    </div>
    
     <div class="brand-container">
       <div class="brand">
@@ -1189,6 +1234,28 @@ int main (void) {
     </footer>
 
     <!-- Bootstrap JS and Popper.js (Optional) -->
+    <script>
+      function copyToClipboard() {
+          // Get the text from the <pre><code> element
+          var code = document.querySelector('pre code').innerText;
+  
+          // Create a temporary textarea element to hold the code
+          var textarea = document.createElement('textarea');
+          textarea.value = code;
+          document.body.appendChild(textarea);
+  
+          // Select the text and copy it
+          textarea.select();
+          document.execCommand('copy');
+  
+          // Remove the temporary textarea
+          document.body.removeChild(textarea);
+  
+          // Optionally, alert the user that the text has been copied
+          alert("Code copied to clipboard!");
+      }
+  </script>
+  
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
