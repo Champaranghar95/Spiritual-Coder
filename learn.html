@@ -22,6 +22,47 @@
       /* Add Bootstrap shadow class */
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       }
+
+      /* styles.css */
+
+
+
+.brand-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.brand {
+    border: 1px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 50%; /* Make the container circular */
+    overflow: hidden; /* Ensures that the image does not exceed the circular boundary */
+    width: 150px; /* Fixed width */
+    height: 150px; /* Fixed height to maintain the circle shape */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .brand {
+        width: 50px; /* Smaller size for smaller screens */
+        height: 50px;
+    }
+}
+
       
     </style>
     <link rel="icon" type="image/png" href="om-coder-logo-831864062.png"/>
@@ -272,6 +313,36 @@
         
       </div>
     </div>
+
+    <div class="brand-container">
+      <div class="brand">
+          <img src="https://infinapps.com/wp-content/uploads/2018/10/mongodb-logo.png" alt="Brand 1">
+      </div>
+      <div class="brand">
+          <img src="https://adware-technologies.s3.amazonaws.com/uploads/technology/thumbnail/20/express-js.png" alt="Brand 2">
+      </div>
+      <div class="brand">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/1200px-React_Logo_SVG.svg.png" alt="Brand 3">
+      </div>
+    
+    <div class="brand">
+          <img src="https://w7.pngwing.com/pngs/232/470/png-transparent-circle-js-node-node-js-programming-round-icon-popular-services-brands-vol-icon.png" alt="Brand 3">
+      </div>
+    
+    <div class="brand">
+          <img src="https://cdn-icons-png.flaticon.com/512/919/919832.png" alt="Brand 3">
+      </div>
+    <div class="brand">
+          <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="Brand 3">
+      </div>
+     <div class="brand">
+          <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/bootstrap-5-logo-icon.png" alt="Brand 3">
+      </div>
+     <div class="brand">
+          <img src="https://bourhaouta.gallerycdn.vsassets.io/extensions/bourhaouta/tailwindshades/0.0.5/1592520164095/Microsoft.VisualStudio.Services.Icons.Default" alt="Brand 3">
+      </div>
+      <!-- Add more brands as needed -->
+  </div>
 
     <footer class="bg-dark text-light text-center py-3">
       <!-- Footer content goes here -->
