@@ -1,4 +1,4 @@
-
+ok
 # Spiritual-Coder Portfolio & Coding Learning Website
 Welcome to Spiritual-Coder, your ultimate destination for embarking on a transformative coding journey and showcasing your coding prowess!
 
@@ -30,7 +30,8 @@ Clone the Repository:
 
 bash
 Copy code
-git clone https://github.com/Spiritual-Coder/Spiritual-Coder.git
+git clone 
+https://champaranghar95.github.io/Spiritual-Coder/
 Install Dependencies:
 
 bash
